@@ -9,12 +9,21 @@ package braintech.listaexercicos;
  * @author Diego
  */
 public class Exercicio2 {
-        public void getSomaPrimos() {
+
+    public void getSomaPrimos() {
         int soma = 0;
-        for (int i = 1; i < 1000; i++) {
-            if (i % i == 0) {
-                soma += i;
+        for (int j = 1; j < 1000; j++) {
+            boolean primo = true;
+            for (int i = 2; i < j; i++) {
+                if (j % i == 0) {
+                    primo = false;
+                }
             }
+            if (primo) {
+                soma += j;
+
+            }
+
         }
         System.out.println("Soma dos numeros Primos: " + soma);
     }

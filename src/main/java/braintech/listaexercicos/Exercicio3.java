@@ -10,7 +10,7 @@ package braintech.listaexercicos;
  */
 public class Exercicio3 {
     public void getFatorial(){
-        int fatorial = 1;
+        long fatorial = 1;
         for(int i = 1; i <20; i++ ){
             fatorial *= i;
         }
