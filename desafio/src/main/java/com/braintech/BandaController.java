@@ -31,10 +31,25 @@ public class BandaController {
     }
 
     public void showBandas() {
-        System.out.println("Lista de bandas:");
-        for (int i = 0; i < bandas.size(); i++) {
-            System.out.println(bandas.get(i));
-        }
+    // código ASCII para a borda
+    String border = "╔══════════════════════════════════════════════╗\n";
+    border += "║              Lista de bandas                 ║\n";
+    border += "╠══════════════════════════════════════════════╣";
+
+    // cor da mensagem
+    String color = "\u001B[35m"; // cor magenta
+
+    // exibindo a borda e a lista de bandas
+    System.out.println(color + border + color); // resetando a cor
+    for (int i = 0; i < bandas.size(); i++) {
+        System.out.println(String.format("║  %-42s  ║", bandas.get(i)));
+    }
+
+    // borda inferior
+    System.out.println("╚══════════════════════════════════════════════╝");
+    System.out.println("");
+    System.out.println(color + border + "\u001B[0m"); // resetando a cor
+
     }
 
 }
