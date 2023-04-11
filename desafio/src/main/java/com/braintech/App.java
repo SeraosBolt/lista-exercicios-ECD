@@ -54,6 +54,7 @@ public class App {
                 break;
             default:
                 System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
+                mainMenu(bandaController);
                 break;
         }
 
